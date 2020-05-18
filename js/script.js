@@ -16,19 +16,43 @@ window.scanQrCode = () => {
 };
 
 
+window.generateQrCode = (input) => {
+    console.log("generateQrCode", input);
+    const codeWriter = new ZXing.BrowserQRCodeSvgWriter();
+    // you can get a SVG element.
+    const svgElement = codeWriter.write(input, 300, 300);
+    // or render it directly to DOM.
+    codeWriter.writeToDom('#qrCodeResult', input, 300, 300);
+};
+
+
+window.toggleCol = (id) => {
+    console.log("toggle col fired", id);
+    let elements = document.getElementsByClassName("exercisegr-" + id);
+    console.log(elements);
+    for (let item of elements) {
+        console.log(item.id);
+    }
+
+};
+
 function decodeOnce(codeReader, selectedDeviceId) {
-    codeReader.decodeFromInputVideoDevice(selectedDeviceId, 'previewQr').then((result) => {
-        console.log(result);
-        return result;
-    })
-        .finally(() => {
+    return codeReader.decodeFromInputVideoDevice(selectedDeviceId, 'previewQr')
+        .then((result, err) => {
+            console.log(result);
+
             codeReader.scannerEnabled = false;
             stopStreamedVideo(document.getElementById('previewQr'));
-        })
-        .catch((err) => {
-        console.error(err)
-        //document.getElementById('result').textContent = err
-    })
+
+            return result.text;
+        });
+        //.finally(() => {
+        //    codeReader.scannerEnabled = false;
+        //    stopStreamedVideo(document.getElementById('previewQr'));
+        //}).catch((err) => {
+        //    console.error(err)
+        //    //document.getElementById('result').textContent = err
+        //});
 }
 
 
