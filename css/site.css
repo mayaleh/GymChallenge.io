@@ -28,8 +28,8 @@ app {
     content: "\e7e9";
 }
 
-.e-close:before {
-    content: "\e7a7";
+e-icon.e-close:before {
+    content: '\e7a7';
 }
 
 .e-settings:before {
@@ -71,7 +71,75 @@ app {
 }
 
 
-.blazor-error-ui {
+/* Sidebar styles */
+.e-sidebar .e-icons::before {
+    font-size: 25px;
+}
+
+/* dockbar icon Style */
+.e-sidebar .home::before {
+    content: '\eb3e';
+}
+
+.e-sidebar .profile::before {
+    content: '\e10c';
+}
+
+.e-sidebar .info::before {
+    content: '\e607';
+}
+
+.e-sidebar .exercises::before {
+    content: '\e30d';
+}
+
+.e-sidebar .settings::before {
+    content: '\eb4c';
+}
+
+.e-sidebar.e-dock.e-close span.e-text {
+    display: none;
+}
+
+.e-sidebar.e-dock.e-open span.e-text {
+    display: inline-block;
+}
+
+.e-sidebar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.e-sidebar ul {
+    padding: 0px;
+}
+
+
+.e-sidebar span.e-icons {
+    color: #c0c2c5;
+    line-height: 2
+}
+
+.e-open .e-icons {
+    margin-right: 16px;
+}
+
+.e-open .e-text {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.sidebar-item {
+    text-align: center;
+    border-bottom: 1px #e5e5e58a solid;
+}
+
+
+.e-sidebar {
+    background: #2d323e;
+    overflow: hidden;
+}
+    .blazor-error-ui {
     display:none;
 }
 
@@ -179,4 +247,76 @@ div.e-card {
 
 .warn{
     color: #ff9800;
+}
+
+
+.e-sidebar a, .e-sidebar a .e-text, .e-sidebar a .e-icon{
+    color: rgba(0,174,239,1) !important;
+}
+
+.e-sidebar a:hover{
+    text-decoration:none;
+}
+
+.e-sidebar.e-dock.e-close span.e-text {
+    display: none;
+}
+
+.e-sidebar.e-dock.e-open span.e-text {
+    display: inline-block;
+}
+
+.e-sidebar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.e-sidebar ul {
+    padding: 0px;
+}
+
+
+.e-sidebar span.e-icons {
+    /*    color: #c0c2c5;*/
+    color: #00aeef !important;
+    line-height: 2
+}
+
+.e-open .e-icons {
+    margin-right: 16px;
+}
+
+.e-open .e-text {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.sidebar-item {
+    text-align: center;
+    border-bottom: 1px #e5e5e58a solid;
+}
+
+.e-sidebar.e-open .sidebar-item {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.e-sidebar {
+    /* background: #191919; */
+    background-color: #191919;
+    overflow: hidden;
+}
+
+    .e-sidebar .expand::before,
+    .e-sidebar.e-right.e-open .expand::before {
+        content: '\ec08';
+    }
+
+    .e-sidebar.e-open .expand::before,
+    .e-sidebar.e-right .expand::before {
+        content: '\ec05';
+    }
+
+.main-content {
+    margin-left: 72px !important;
 }
