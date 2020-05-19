@@ -8,6 +8,10 @@ html, body {
     /*color: #333;*/
     color: #fff;
     background-color: #212121;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 app {
@@ -319,4 +323,10 @@ div.e-card {
 
 .main-content {
     margin-left: 72px !important;
+}
+
+
+.modal-responsive{
+    min-width: 320px !important;
+    width: 45% !important;
 }
