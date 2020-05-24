@@ -30147,6 +30147,7 @@ ejs-multiselect {
 }
 
 .e-listbox-wrapper:not(.e-list-template) .e-list-item,
+.e-listbox-wrapper .e-list-nrt,
 .e-listbox-wrapper .e-selectall-parent {
   height: 40px;
   line-height: 36px;
@@ -39943,7 +39944,9 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-grid.e-rtl .e-frozenheader > .e-table,
-.e-grid.e-rtl .e-frozencontent > .e-table {
+.e-grid.e-rtl .e-frozencontent > .e-table,
+.e-grid.e-rtl .e-frozenheader .e-virtualtable > .e-table,
+.e-grid.e-rtl .e-frozencontent .e-virtualtable > .e-table {
   border-left: 1px solid;
   border-right: 0;
 }
@@ -40758,7 +40761,9 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-grid.e-rtl .e-frozenheader > .e-table,
-.e-grid.e-rtl .e-frozencontent > .e-table {
+.e-grid.e-rtl .e-frozencontent > .e-table,
+.e-grid.e-rtl .e-frozenheader .e-virtualtable > .e-table,
+.e-grid.e-rtl .e-frozencontent .e-virtualtable > .e-table {
   border-left-color: #317ab9;
 }
 
@@ -47341,6 +47346,14 @@ span.e-table-box.e-rbox-select {
   content: '\e240';
 }
 
+.e-gantt .e-indent::before {
+  content: '\e33f';
+}
+
+.e-gantt .e-outdent::before {
+  content: '\e35d';
+}
+
 .e-gantt .e-add-above::before {
   content: '\e658';
 }
@@ -49635,7 +49648,7 @@ span.e-table-box.e-rbox-select {
   text-align: right;
 }
 
-.e-kanban .e-kanban-header .e-swimlane .e-header-cells {
+.e-kanban .e-kanban-header .e-swimlane .e-header-cells.e-header-bottom {
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -49705,7 +49718,7 @@ span.e-table-box.e-rbox-select {
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-show-add-button {
   border: 1px dashed #317ab9;
   height: 36px;
-  margin: 0 8px 16px;
+  margin: 8px 8px 0;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-show-add-button .e-show-add-icon {
@@ -49724,14 +49737,17 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper {
   overflow: auto;
-  padding: 8px;
+  padding: 8px 8px 0;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card {
   border: 1px solid transparent;
-  cursor: all-scroll;
   margin-bottom: 8px;
   min-height: 50px;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.e-draggable {
+  cursor: all-scroll;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card .e-card-header {
@@ -49837,7 +49853,6 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells {
   border: 1px solid transparent;
-  height: 100px;
   vertical-align: top;
 }
 
@@ -49851,6 +49866,10 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells:focus {
   border: 1px solid #e6e6e6;
+}
+
+.e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells .e-card-wrapper {
+  min-height: 50px;
 }
 
 .e-kanban .e-kanban-content .e-content-row.e-collapsed:not(.e-swimlane-row) .e-content-cells {
@@ -49937,6 +49956,7 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban.e-device .e-swimlane-content .e-swimlane-resource {
   background: #fff;
+  border: 1px solid #e6e6e6;
   height: 100%;
   width: 225px;
 }
@@ -50009,16 +50029,9 @@ span.e-table-box.e-rbox-select {
   z-index: 1004;
 }
 
-.e-mobile-popup-wrapper.e-device .e-popup-header {
-  padding: 5px;
-}
-
 .e-mobile-popup-wrapper.e-device .e-popup-header .e-close {
-  border: 0;
-  height: auto;
-  padding: 4px;
-  width: auto;
   background-color: transparent;
+  border: 0;
 }
 
 .e-mobile-popup-wrapper.e-device .e-popup-content {
@@ -50029,6 +50042,7 @@ span.e-table-box.e-rbox-select {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+  padding: 4px;
 }
 
 .e-kanban-dialog .e-kanban-form-wrapper table {
@@ -67265,10 +67279,10 @@ div > .e-pv-bookmark-icon.e-pv-icon.e-right {
   height: auto;
 }
 
-.e-schedule .e-timeline-view .e-ignore-whitespace .e-work-cells,
-.e-schedule .e-timeline-view .e-ignore-whitespace .e-resource-cells,
-.e-schedule .e-timeline-month-view .e-ignore-whitespace .e-work-cells,
-.e-schedule .e-timeline-month-view .e-ignore-whitespace .e-resource-cells {
+.e-schedule .e-timeline-view.e-ignore-whitespace .e-work-cells,
+.e-schedule .e-timeline-view.e-ignore-whitespace .e-resource-cells,
+.e-schedule .e-timeline-month-view.e-ignore-whitespace .e-work-cells,
+.e-schedule .e-timeline-month-view.e-ignore-whitespace .e-resource-cells {
   height: 42px;
 }
 

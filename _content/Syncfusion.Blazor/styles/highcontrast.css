@@ -1188,6 +1188,10 @@
   height: 36px;
 }
 
+.e-popup.e-ddl .e-dropdownbase {
+  min-height: 26px;
+}
+
 .e-ddl.e-popup {
   border: 0;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
@@ -30893,6 +30897,7 @@ e-ddl.e-popup.e-multi-select-list-wrapper.e-multiselct-group.e-checkbox .e-list-
 }
 
 .e-listbox-wrapper:not(.e-list-template) .e-list-item,
+.e-listbox-wrapper .e-list-nrt,
 .e-listbox-wrapper .e-selectall-parent {
   height: 36px;
   line-height: 30px;
@@ -37452,7 +37457,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 .e-pager .e-mprev,
 .e-pager .e-mnext,
 .e-pager .e-mlast {
-  -webkit-tap-highlight-color: #ffd939;
+  -webkit-tap-highlight-color: #000;
 }
 
 .e-pager .e-pp,
@@ -37677,7 +37682,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 
 /*! Pager theme */
 .e-pager {
-  background-color: #ffd939;
+  background-color: #000;
   border-color: #969696;
   color: #fff;
   opacity: 1;
@@ -37725,7 +37730,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-pager .e-numericitem {
-  background: #ffd939;
+  background: #000;
   border-right-color: #969696;
   color: #fff;
 }
@@ -37738,7 +37743,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 .e-pager .e-lastpage,
 .e-pager .e-firstpage,
 .e-pager .e-firstpagedisabled {
-  background-color: #ffd939;
+  background-color: #000;
   color: #fff;
 }
 
@@ -37748,7 +37753,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-pager .e-pagercontainer {
-  background-color: #ffd939;
+  background-color: #000;
   border-color: #969696;
 }
 
@@ -37772,7 +37777,7 @@ label[for*='_wholeWord_e-de-rtl'] {
 
 @media (max-width: 590px) {
   .e-pager .e-pager-default:hover {
-    background: #ffd939;
+    background: #000;
     color: #fff;
     opacity: 1;
   }
@@ -40627,7 +40632,9 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-grid.e-rtl .e-frozenheader > .e-table,
-.e-grid.e-rtl .e-frozencontent > .e-table {
+.e-grid.e-rtl .e-frozencontent > .e-table,
+.e-grid.e-rtl .e-frozenheader .e-virtualtable > .e-table,
+.e-grid.e-rtl .e-frozencontent .e-virtualtable > .e-table {
   border-left: 1px solid;
   border-right: 0;
 }
@@ -41442,7 +41449,9 @@ label[for*='_wholeWord_e-de-rtl'] {
 }
 
 .e-grid.e-rtl .e-frozenheader > .e-table,
-.e-grid.e-rtl .e-frozencontent > .e-table {
+.e-grid.e-rtl .e-frozencontent > .e-table,
+.e-grid.e-rtl .e-frozenheader .e-virtualtable > .e-table,
+.e-grid.e-rtl .e-frozencontent .e-virtualtable > .e-table {
   border-left-color: #ffd939;
 }
 
@@ -48115,6 +48124,14 @@ span.e-table-box.e-rbox-select {
   content: '\e240';
 }
 
+.e-gantt .e-indent::before {
+  content: '\e33f';
+}
+
+.e-gantt .e-outdent::before {
+  content: '\e35d';
+}
+
 .e-gantt .e-add-below::before {
   content: '\e659';
 }
@@ -49209,7 +49226,7 @@ span.e-table-box.e-rbox-select {
 }
 
 .e-gantt .e-gantt-tree-grid-pane .e-grid td.e-active {
-  background: #ffd939;
+  background: rgba(255, 217, 57, 0.7);
 }
 
 .e-gantt .e-gantt-chart .e-timeline-header-container {
@@ -49511,7 +49528,7 @@ span.e-table-box.e-rbox-select {
 }
 
 .e-gantt .e-gantt-chart .e-active {
-  background: #ffd939;
+  background: rgba(255, 217, 57, 0.7);
   color: #000;
   opacity: 1;
 }
@@ -50405,7 +50422,7 @@ span.e-table-box.e-rbox-select {
   text-align: right;
 }
 
-.e-kanban .e-kanban-header .e-swimlane .e-header-cells {
+.e-kanban .e-kanban-header .e-swimlane .e-header-cells.e-header-bottom {
   border-bottom: 1px solid #969696;
 }
 
@@ -50475,7 +50492,7 @@ span.e-table-box.e-rbox-select {
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-show-add-button {
   border: 1px dashed #ffd939;
   height: 36px;
-  margin: 0 8px 16px;
+  margin: 8px 8px 0;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-show-add-button .e-show-add-icon {
@@ -50494,14 +50511,17 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper {
   overflow: auto;
-  padding: 8px;
+  padding: 8px 8px 0;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card {
   border: 1px solid transparent;
-  cursor: all-scroll;
   margin-bottom: 8px;
   min-height: 50px;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.e-draggable {
+  cursor: all-scroll;
 }
 
 .e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card .e-card-header {
@@ -50615,7 +50635,6 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells {
   border: 1px solid transparent;
-  height: 100px;
   vertical-align: top;
 }
 
@@ -50629,6 +50648,10 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells:focus {
   border: 1px solid #969696;
+}
+
+.e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells .e-card-wrapper {
+  min-height: 50px;
 }
 
 .e-kanban .e-kanban-content .e-content-row.e-collapsed:not(.e-swimlane-row) .e-content-cells {
@@ -50717,6 +50740,7 @@ span.e-table-box.e-rbox-select {
 
 .e-kanban.e-device .e-swimlane-content .e-swimlane-resource {
   background: #000;
+  border: 1px solid #969696;
   height: 100%;
   width: 225px;
 }
@@ -50789,15 +50813,7 @@ span.e-table-box.e-rbox-select {
   z-index: 1004;
 }
 
-.e-mobile-popup-wrapper.e-device .e-popup-header {
-  padding: 5px;
-}
-
 .e-mobile-popup-wrapper.e-device .e-popup-header .e-close {
-  border: 0;
-  height: auto;
-  padding: 4px;
-  width: auto;
   background-color: transparent;
 }
 
@@ -50810,6 +50826,7 @@ span.e-table-box.e-rbox-select {
   white-space: nowrap;
   width: 100%;
   color: #fff;
+  padding: 3px;
 }
 
 .e-kanban-dialog .e-kanban-form-wrapper table {
@@ -68050,10 +68067,10 @@ div > .e-pv-bookmark-icon.e-pv-icon.e-right {
   height: auto;
 }
 
-.e-schedule .e-timeline-view .e-ignore-whitespace .e-work-cells,
-.e-schedule .e-timeline-view .e-ignore-whitespace .e-resource-cells,
-.e-schedule .e-timeline-month-view .e-ignore-whitespace .e-work-cells,
-.e-schedule .e-timeline-month-view .e-ignore-whitespace .e-resource-cells {
+.e-schedule .e-timeline-view.e-ignore-whitespace .e-work-cells,
+.e-schedule .e-timeline-view.e-ignore-whitespace .e-resource-cells,
+.e-schedule .e-timeline-month-view.e-ignore-whitespace .e-work-cells,
+.e-schedule .e-timeline-month-view.e-ignore-whitespace .e-resource-cells {
   height: 42px;
 }
 
