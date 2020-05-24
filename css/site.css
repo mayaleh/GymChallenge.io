@@ -1,0 +1,345 @@
+﻿/*@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+html, body {
+    /*    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    /*color: #333;*/
+    color: #fff;
+    background-color: #212121;
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal{
+    top:50px;
+}
+
+.e-plus-icon::before {
+    content: '\e823';
+}
+
+.e-close-circle:before {
+    content: "\e7e9";
+}
+
+.e-icons.e-close:before {
+    content: '\e7a7';
+}
+
+.e-settings:before {
+    content: "\e679";
+}
+
+.e-print:before {
+    content: "\e813";
+}
+
+.e-save:before {
+    content: "\e703";
+}
+
+.e-saveas:before {
+    content: "\e704";
+}
+
+.e-delete:before {
+    content: "\e707";
+}
+
+.e-undo:before {
+    content: "\ec14";
+}
+
+.e-next-page:before {
+    content: "\e897";
+}
+.e-people:before {
+    content: "\e424";
+}
+.e-add-above:before {
+    content: "\e658";
+}
+
+.e-insert-tab:before {
+    content: "\ea92";
+}
+
+
+/* Sidebar styles */
+.e-sidebar .e-icons::before {
+    font-size: 25px;
+}
+
+.e-sidebar .material-icons {
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+.e-sidebar .sidebar-item:not(.e-right) a {
+    display: block;
+    padding: 5px 0;
+}
+
+/* dockbar icon Style */
+.e-sidebar .home::before {
+    content: '\eb3e';
+}
+
+.e-sidebar .profile::before {
+    content: '\e10c';
+}
+
+.e-sidebar .info::before {
+    content: '\e607';
+}
+
+.e-sidebar .exercises::before {
+    content: '\e30d';
+}
+
+.e-sidebar .settings::before {
+    content: '\eb4c';
+}
+
+.e-sidebar.e-dock.e-close span.e-text {
+    display: none;
+}
+
+.e-sidebar.e-dock.e-open span.e-text {
+    display: inline-block;
+}
+
+.e-sidebar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.e-sidebar ul {
+    padding: 0px;
+}
+
+
+.e-sidebar span.e-icons {
+    color: #c0c2c5;
+    line-height: 2
+}
+
+.e-open .e-icons {
+    margin-right: 16px;
+}
+
+.e-open .e-text {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.sidebar-item {
+    text-align: center;
+    border-bottom: 1px #e5e5e58a solid;
+}
+
+
+.e-sidebar {
+    background: #2d323e;
+    overflow: hidden;
+}
+    .blazor-error-ui {
+    display:none;
+}
+
+.cont-container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+ .e-card, .e-card:hover, .e-card:active {
+    border: 1px solid #555555 !important;
+    background-color: #303030 !important;
+}
+    .e-card, .e-card:hover, .e-card:active {
+        border-color: #FFFFFF !important;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.16) !important;
+        border-width: 1px !important;
+        border-radius: 5px !important;
+    }
+div.e-card {
+    width: auto;
+    padding: 15px;
+}
+
+.e-card {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #303030;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.e-card {
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+    font-size: 15px;
+    justify-content: center;
+    line-height: 16px;
+    min-height: 48px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+
+.e-card, .e-card:hover, .e-card:active {
+    border: 1px solid #555555 !important;
+    background-color: #303030 !important;
+}
+
+.e-tab .e-tab-header .e-toolbar-item.e-active {
+    border: none !important;
+    border-bottom: 2px Solid #00aeef;
+    border-radius: 0;
+}
+
+
+
+.table{
+    color: white;
+}
+
+
+.footer {
+    border: 1px solid #555555 !important;
+    border-left: none !important;
+    border-right: none !important;
+    /* background-color: #303030 !important; */
+    background-color: rgba(4,0,104,1) !important;
+}
+
+.e-menu-wrapper{
+    background-color: black !important;
+}
+
+.footer a{
+    color:rgba(0,174,239,1);
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.table thead th{
+    border-top: 2px solid rgba(4,0,104,1);
+    border-bottom: 2px solid rgba(4,0,104,1);
+}
+
+.list-group-item{
+    background-color: transparent !important;
+}
+
+#qrCodeResult svg{
+    background-color: white !important;
+}
+
+.warn{
+    color: #ff9800;
+}
+
+
+.e-sidebar a, .e-sidebar a .e-text, .e-sidebar a .e-icon{
+    color: rgba(0,174,239,1) !important;
+}
+
+.e-sidebar a:hover{
+    text-decoration:none;
+}
+
+.e-sidebar.e-dock.e-close span.e-text {
+    display: none;
+}
+
+.e-sidebar.e-dock.e-open span.e-text {
+    display: inline-block;
+}
+
+.e-sidebar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.e-sidebar ul {
+    padding: 0px;
+}
+
+
+.e-sidebar span.e-icons {
+    /*    color: #c0c2c5;*/
+/*    color: #00aeef !important;*/
+    color: white !important;
+    line-height: 2
+}
+
+.e-open .e-icons {
+    margin-right: 16px;
+}
+
+.e-open .e-text {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.sidebar-item {
+    text-align: center;
+    border-bottom: 1px #e5e5e58a solid;
+}
+
+.e-sidebar.e-open .sidebar-item {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.e-sidebar {
+    /* background: #191919; */
+    background-color: #191919;
+    overflow: hidden;
+}
+
+    .e-sidebar .expand::before,
+    .e-sidebar.e-right.e-open .expand::before {
+        content: '\ec08';
+    }
+
+    .e-sidebar.e-open .expand::before,
+    .e-sidebar.e-right .expand::before {
+        content: '\ec05';
+    }
+
+.main-content {
+    margin-left: 72px !important;
+}
+
+
+.modal-responsive{
+    min-width: 320px !important;
+    width: 45% !important;
+}
