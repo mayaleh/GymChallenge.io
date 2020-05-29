@@ -101,11 +101,3 @@ function stopStreamedVideo(videoElem) {
 
     videoElem.srcObject = null;
 }
-
-$(document).ready(() => {
-
-    $("#menu-toggle").on("click", (e) => {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-});
